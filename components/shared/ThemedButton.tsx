@@ -6,7 +6,7 @@ interface Props extends PressableProps {
     color: 'primary' | 'secondary' | 'tertiary'
 }
 
-const CustomBotton = ({children, color = 'primary', onPress, onLongPress}: Props) => {
+const ThemedButton = ({children, color = 'primary', onPress, onLongPress}: Props) => {
 
   const buttonColor = {
     primary: 'bg-primary',
@@ -16,7 +16,7 @@ const CustomBotton = ({children, color = 'primary', onPress, onLongPress}: Props
 
   return (  
     <Pressable 
-        className={`${buttonColor} rounded-md p-4 w-1/2 active:opacity-80`}
+        className={`${buttonColor} rounded-md p-4 w-2/3 active:opacity-80 m-2`}
         onLongPress={onLongPress}
         onPress={onPress}
         >
@@ -25,4 +25,4 @@ const CustomBotton = ({children, color = 'primary', onPress, onLongPress}: Props
   )
 }
 
-export default CustomBotton
+export default ThemedButton
